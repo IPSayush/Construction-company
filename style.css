@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Libertinus+Serif+Display&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Moon+Dance&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IT+Moderna:wght@200&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&family=Style+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    font-style: normal;
+
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    /* position:sticky; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    padding: .7rem 1.5vw;
+    border-bottom: 1px solid gray;
+}
+
+.l-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    /* background-color: orange; */
+}
+
+.l-nav .logo-img-div {
+    /* background-color: orange; */
+    display: flex;
+    align-items: end;
+}
+
+.l-nav .logo-img-div img {
+    width: 5rem;
+}
+
+.logo-text-div p {
+    font-weight: 550;
+}
+
+.r-nav {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    /* font-size: 1rem; */
+}
+
+li:last-child {
+    margin-inline: 1rem;
+    background-color: yellow;
+}
+
+li {
+    /* font-size: 1em; */
+    text-align: center;
+    list-style: none;
+    /* background-color: gray; */
+    padding: .8rem 1.3rem;
+    /* background-color: gray; */
+}
+
+li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+nav .bar-div {
+    font-size: 2rem;
+    display: none;
+}
+
+/*                This Star for hero sectuion                */
+.hero {
+    background-image: url(./images/herobgImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 85vmin;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.6rem;
+}
+.text_containt {
+    align-self: center;
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+}
+.hero_sec_img {
+    align-self: flex-end;
+    background-color: rosybrown;
+    width: 30vmax;
+    height: 20vmax;
+}
+
+.hero .text_containt {
+    color: white;
+    padding-left: 2.6rem;
+    width: 60vw;
+    gap: .1rem;
+}
+.hero .text_containt p, .about_section .text_containt p{
+    font-size: .6em;
+    /* width: 35vmax; */
+    width: 70vmin;
+    display: block;
+    line-height: 2rem;
+}
+.hero .text_containt .text_containt_btn_div , .about_section .text_containt .text_containt_btn_div{
+    margin-top: 2.6rem;
+}
+
+
+.text_containt .text_containt_btn_div {
+    display: flex;
+    align-items: center;
+    gap: 1vmax;
+    font-size: .5em;
+}
+
+.text_containt_btn_div span:first-child {
+    padding: .7rem;
+    background-color: yellow;
+    color: black;
+}
+.abo_ser_icon_div {
+    font-size: .38em;
+    color: black;
+}
+
+.projects_section{
+    padding: 3rem;
+}
+.projects_section .text_containt {
+    padding-block: 4rem;
+    gap: 1.1rem;
+}
+.projects_section .text_containt p{
+    font-size: 1.2em;
+}
+.projects_section .text_containt_btn_div span:first-child{
+    background-color: black;
+    color: white
+}
+.cards_div{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.card_div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 1rem;
+}
+.cards_div img{
+    width: 100%;
+}
+.card_div h5{
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.card_div p{
+    font-size: .8em;
+    font-weight: 300;
+}
+.about_section {
+    background-image: url(images/about.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 2.6rem;
+}
+.about_section .text_containt{
+    position: sticky;
+    gap: .1rem;
+    top: 3rem;
+    padding: 2.6rem;    
+    color: white;
+    border-left: 1px solid gray;
+}
+.about_section .text_containt .abo_ser_icon_div{
+    padding: .5rem;
+    color: white;
+}
+.about_section .text_containt h1{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.clint_section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+        background-color: #F5F5F5;
+}
+.clint_img_div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.clint_section img{
+    width: 75%;
+}
+/* media querries for 800 px */
+@media (max-width: 800px) {
+    .hero {
+        height: 60vmax;
+    }
+
+    nav .bar-div {
+        display: block;
+        transition: all .3s;
+    }
+
+    .r-nav {
+        display: none;
+    }
+
+    .r-nav-show {
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+        height: calc(100vh - 4rem);
+        width: 100vw;
+        top: 4rem;
+        left: 0;
+        padding-inline: 2rem;
+    }
+
+    nav li {
+        border-bottom: 1px dotted gray;
+        position: relative;
+        top: 13rem;
+        font-size: 2rem;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .r-nav li:last-child {
+        margin-top: 3rem;
+    }
+
+    .rotate {
+        transform: rotate(90deg);
+        transition: all .3s;
+
+    }
+}
