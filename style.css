@@ -23,7 +23,7 @@ nav {
     border-bottom: 1px solid gray;
 }
 
-.l-nav {
+nav .l-nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,33 +31,33 @@ nav {
     /* background-color: orange; */
 }
 
-.l-nav .logo-img-div {
+nav .l-nav .logo-img-div {
     /* background-color: orange; */
     display: flex;
     align-items: end;
 }
 
-.l-nav .logo-img-div img {
+nav .l-nav .logo-img-div img {
     width: 5rem;
 }
 
-.logo-text-div p {
+nav .logo-text-div p {
     font-weight: 550;
 }
 
-.r-nav {
+nav .r-nav {
     display: flex;
     align-items: center;
     gap: .3rem;
     /* font-size: 1rem; */
 }
 
-li:last-child {
+nav li:last-child {
     margin-inline: 1rem;
     background-color: yellow;
 }
 
-li {
+nav li {
     /* font-size: 1em; */
     text-align: center;
     list-style: none;
@@ -66,7 +66,7 @@ li {
     /* background-color: gray; */
 }
 
-li:hover {
+nav li:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -214,10 +214,67 @@ nav .bar-div {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .clint_section img{
     width: 75%;
+}
+.more_project{
+    padding: 3rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+.more_project .text_containt{
+    align-self: flex-start;
+    gap: 1.8rem;
+    padding-block: 3rem;
+}
+.more_project_div_2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 3vmax;
+}
+.more_project_card{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 1.1rem;
+    color: #1f1f1f;
+}
+.more_project_div_2::-webkit-scrollbar{
+    display: none;
+}
+/* hsuifgfgfgyg */
+.more_project_img_div, .more_project_img_div img{
+    width: 32vmax;
+    height: 22vmax;
+    object-fit: cover;
+}
+.contact_section{
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+    background-color: yellow;
+}
+.contact_section h3{
+    font-weight: 400;
+}
+.contact_section button{
+    padding: .8rem 1.5rem;
+    font-size: .5em;
+    background-color: black;
+    color: yellow;
+}
+.contact_section button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }
 /* media querries for 800 px */
 @media (max-width: 800px) {
@@ -230,11 +287,11 @@ nav .bar-div {
         transition: all .3s;
     }
 
-    .r-nav {
+    nav .r-nav {
         display: none;
     }
 
-    .r-nav-show {
+    nav .r-nav-show {
         background-color: aqua;
         display: flex;
         align-items: center;
@@ -257,7 +314,7 @@ nav .bar-div {
         text-align: center;
     }
 
-    .r-nav li:last-child {
+    nav .r-nav li:last-child {
         margin-top: 3rem;
     }
 
@@ -282,5 +339,4 @@ nav .bar-div {
     .about_section .text_containt{
         padding: 0;
     }
-    
 }
