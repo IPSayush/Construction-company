@@ -156,7 +156,8 @@ nav .bar-div {
 .cards_div{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 2vmax;
+    justify-content: center;
 }
 .card_div{
     flex: 1;
@@ -267,4 +268,21 @@ nav .bar-div {
         transition: all .3s;
 
     }
+}
+@media (max-width: 650px) {
+    .hero .text_containt{
+        padding: 0;
+        font-size: 2rem;
+    }
+    .cards_div .card_div{
+        font-size: .8rem;
+    }
+    .projects_section .text_containt{
+        font-size: 1rem;
+    
+    }
+    .about_section .text_containt{
+        padding: 0;
+    }
+    
 }
