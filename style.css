@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Libertinus+Serif+Display&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Moon+Dance&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IT+Moderna:wght@200&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&family=Style+Script&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,73 +8,59 @@
     font-style: normal;
 
 }
+
 header {
     width: 100%;
     margin: 0 auto;
 }
+
 nav {
-    width: 100%;
-    /* position:sticky; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    font-size: 1rem;
+    padding: .5vmax 4vmax;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+
+.nav_1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    background: rgb(255, 255, 255);
-    padding: .7rem 1.5vw;
-    border-bottom: 1px solid gray;
+    gap: 1vw;
+    font-size: .9em;
 }
 
-nav .l-nav {
+.nav_2 {
+    width: 60vw;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    /* background-color: orange; */
+    justify-content: flex-end;
+    gap: 2vw;
 }
 
-nav .l-nav .logo-img-div {
-    /* background-color: orange; */
-    display: flex;
-    align-items: end;
+.nav_2 a {
+    text-decoration: none;
+    padding: .5vmax 1vmax;
+    color: black;
+    font-weight: 400;
 }
 
-nav .l-nav .logo-img-div img {
-    width: 5rem;
+.nav_2 a:last-child {
+    background-color: #e3ff00;
+    padding: .8vmax 3vmax;
 }
 
-nav .logo-text-div p {
-    font-weight: 550;
-}
-
-nav .r-nav {
-    display: flex;
-    align-items: center;
-    gap: .3rem;
-    /* font-size: 1rem; */
-}
-
-nav li:last-child {
-    margin-inline: 1rem;
-    background-color: yellow;
-}
-
-nav li {
-    /* font-size: 1em; */
-    text-align: center;
-    list-style: none;
-    /* background-color: gray; */
-    padding: .8rem 1.3rem;
-    /* background-color: gray; */
-}
-
-nav li:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-nav .bar-div {
-    font-size: 2rem;
+.nav_3 {
     display: none;
+}
+
+.nav_1 img {
+    width: 6vmax;
 }
 
 /*                This Star for hero sectuion                */
@@ -88,6 +75,7 @@ nav .bar-div {
     justify-content: space-between;
     padding-left: 2.6rem;
 }
+
 .text_containt {
     align-self: center;
     font-size: 2.4rem;
@@ -95,6 +83,7 @@ nav .bar-div {
     flex-direction: column;
     color: rgb(0, 0, 0);
 }
+
 .hero_sec_img {
     align-self: flex-end;
     background-color: rosybrown;
@@ -108,14 +97,18 @@ nav .bar-div {
     width: 60vw;
     gap: .1rem;
 }
-.hero .text_containt p, .about_section .text_containt p{
+
+.hero .text_containt p,
+.about_section .text_containt p {
     font-size: .6em;
     /* width: 35vmax; */
     width: 70vmin;
     display: block;
     line-height: 2rem;
 }
-.hero .text_containt .text_containt_btn_div , .about_section .text_containt .text_containt_btn_div{
+
+.hero .text_containt .text_containt_btn_div,
+.about_section .text_containt .text_containt_btn_div {
     margin-top: 2.6rem;
 }
 
@@ -132,49 +125,59 @@ nav .bar-div {
     background-color: yellow;
     color: black;
 }
+
 .abo_ser_icon_div {
     font-size: .38em;
     color: black;
 }
 
-.projects_section{
+.projects_section {
     padding: 3rem;
 }
+
 .projects_section .text_containt {
     padding-block: 4rem;
     gap: 1.1rem;
 }
-.projects_section .text_containt p{
+
+.projects_section .text_containt p {
     font-size: 1.2em;
 }
-.projects_section .text_containt_btn_div span:first-child{
+
+.projects_section .text_containt_btn_div span:first-child {
     background-color: black;
     color: white
 }
-.cards_div{
+
+.cards_div {
     display: flex;
     flex-direction: row;
     gap: 2vmax;
     justify-content: center;
 }
-.card_div{
+
+.card_div {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 2px;
     font-size: 1rem;
 }
-.cards_div img{
+
+.cards_div img {
     width: 100%;
 }
-.card_div h5{
+
+.card_div h5 {
     font-size: 1.1em;
     font-weight: 400;
 }
-.card_div p{
+
+.card_div p {
     font-size: .8em;
     font-weight: 300;
 }
+
 .about_section {
     background-image: url(images/about.avif);
     background-position: center;
@@ -185,74 +188,87 @@ nav .bar-div {
     position: relative;
     padding: 2.6rem;
 }
-.about_section .text_containt{
+
+.about_section .text_containt {
     position: sticky;
     gap: .1rem;
     top: 3rem;
-    padding: 2.6rem;    
+    padding: 2.6rem;
     color: white;
     border-left: 1px solid gray;
 }
-.about_section .text_containt .abo_ser_icon_div{
+
+.about_section .text_containt .abo_ser_icon_div {
     padding: .5rem;
     color: white;
 }
-.about_section .text_containt h1{
+
+.about_section .text_containt h1 {
     font-size: 1.5em;
     font-weight: 400;
 }
 
-.clint_section{
+.clint_section {
     width: 100%;
     display: flex;
     flex-direction: row;
     padding: 2rem;
-        background-color: #F5F5F5;
+    background-color: #F5F5F5;
 }
-.clint_img_div{
+
+.clint_img_div {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.clint_section img{
+
+.clint_section img {
     width: 75%;
 }
-.more_project{
+
+.more_project {
     padding: 3rem;
     display: flex;
     gap: 2rem;
     flex-direction: column;
 }
-.more_project .text_containt{
+
+.more_project .text_containt {
     align-self: flex-start;
     gap: 1.8rem;
     padding-block: 3rem;
 }
-.more_project_div_2{
+
+.more_project_div_2 {
     width: 100%;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
     gap: 3vmax;
 }
-.more_project_card{
+
+.more_project_card {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     font-size: 1.1rem;
     color: #1f1f1f;
 }
-.more_project_div_2::-webkit-scrollbar{
+
+.more_project_div_2::-webkit-scrollbar {
     display: none;
 }
+
 /* hsuifgfgfgyg */
-.more_project_img_div, .more_project_img_div img{
+.more_project_img_div,
+.more_project_img_div img {
     width: 32vmax;
     height: 22vmax;
     object-fit: cover;
 }
-.contact_section{
+
+.contact_section {
     width: 100%;
     font-size: 2rem;
     display: flex;
@@ -262,108 +278,88 @@ nav .bar-div {
     gap: 2rem;
     background-color: yellow;
 }
-.contact_section h3{
+
+.contact_section h3 {
     font-weight: 400;
 }
-.contact_section button{
+
+.contact_section button {
     padding: .8rem 1.5rem;
     font-size: .5em;
     background-color: black;
     color: yellow;
 }
-.contact_section button:hover{
+
+.contact_section button:hover {
     color: black;
     background-color: white;
     border: 1px solid black;
 }
-footer{
+
+footer {
     background-color: #F5F5F5;
     font-size: 1rem;
 }
-.footer-container{
+
+.footer-container {
     padding: 3rem;
     width: 100%;
     display: flex;
     flex-direction: row;
 }
-.ft_child{
+
+.ft_child {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: flex-start;
 }
-.ft_child img{
+
+.ft_child img {
     width: 8vmax;
 }
-.ft_child ul{
+
+.ft_child ul {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     list-style: none;
 }
-.ft_child ul li a{
+
+.ft_child ul li a {
     text-decoration: none;
     color: black;
 }
-.footer_container_2{
+
+.footer_container_2 {
     display: flex;
     padding: 2rem;
     width: 100%;
     justify-content: space-between;
 }
-.footer_container_2 .ft_container_left , .footer_container_2 .ft_container_right{
+
+.footer_container_2 .ft_container_left,
+.footer_container_2 .ft_container_right {
     list-style: none;
     display: flex;
     flex-direction: row;
     gap: 1rem;
-}.ft_container_left li{
+}
+
+.ft_container_left li {
     text-align: center;
 }
-footer hr{
+
+footer hr {
     width: 90vw;
     margin: 0 auto;
 }
+
 /* media querries for 800 px */
 @media (max-width: 800px) {
     .hero {
-        height: 60vmax;
-    }
-
-    nav .bar-div {
-        display: block;
-        transition: all .3s;
-    }
-
-    nav .r-nav {
-        display: none;
-    }
-
-    nav .r-nav-show {
-        background-color: aqua;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        z-index: 10;
-        height: calc(100vh - 4rem);
-        width: 100vw;
-        top: 4rem;
-        left: 0;
-        padding-inline: 2rem;
-    }
-
-    nav li {
-        border-bottom: 1px dotted gray;
-        position: relative;
-        top: 13rem;
-        font-size: 2rem;
-        width: 90vw;
-        text-align: center;
-    }
-
-    nav .r-nav li:last-child {
-        margin-top: 3rem;
+        height: 70vmax;
     }
 
     .rotate {
@@ -371,53 +367,86 @@ footer hr{
         transition: all .3s;
 
     }
-    .contact_section{
+
+    .contact_section {
         font-size: .8rem;
         text-align: center;
         gap: .5rem;
         padding: 1rem;
     }
-    .contact_section button{
+
+    .contact_section button {
         font-size: 1rem;
     }
-    footer{
+
+    footer {
         font-size: .7rem;
     }
-    .footer-container{
+
+    .footer-container {
         padding: 2rem .5rem;
         flex-wrap: wrap;
     }
-    .ft_child{
-            align-items: center;
-    text-align: center;
+
+    .ft_child {
+        align-items: center;
+        text-align: center;
     }
-    .footer_container_2{
+
+    .footer_container_2 {
         flex-wrap: wrap;
         gap: .5rem;
         justify-content: center;
         align-items: center;
     }
 }
+
 @media (max-width: 650px) {
-    .hero .text_containt, .about_section .text_containt{
+    nav{
+        padding: 1vmax;
+    }
+    .nav_3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 2em;
+    }
+    .nav_2 {
+        flex-direction: column;
+        background-color: #F5F5F5;
+        position: fixed;
+        top: 6.8vh;
+        left: 100vw;
+        width: 100vw;
+        transition: all .3s;
+        padding: 2vmax;
+    }
+
+    .hero .text_containt,
+    .about_section .text_containt {
         padding: 0;
         font-size: 2rem;
     }
-    .cards_div .card_div{
+
+    .cards_div .card_div {
         font-size: .8rem;
     }
-    .clint_section{
+
+    .clint_section {
         padding: .4rem;
     }
-    .clint_section img{
+
+    .clint_section img {
         width: 80%;
     }
-    .projects_section .text_containt{
+
+    .projects_section .text_containt {
         font-size: 2rem;
-    
+
     }
-    .about_section .text_containt{
+
+    .about_section .text_containt {
         padding: 0;
     }
-    
+
 }
