@@ -245,6 +245,7 @@ nav {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    scroll-behavior: auto;
     gap: 3vmax;
 }
 
